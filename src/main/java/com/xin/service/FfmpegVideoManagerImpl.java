@@ -16,8 +16,8 @@ public class FfmpegVideoManagerImpl implements FfmpegVideoManager {
 //    private final static String INPUTPATH = "E:\\GoogleDownload\\science\\huoyuanjia.mp4";
 
     private final static String base = System.getProperty("user.dir");
-    private final static String OUTPATH = "E:\\GoogleDownload\\ccccc\\science\\";
-    private final static String FFMPEGPATH = base+"/ffmpeg.exe  ";
+    private final static String OUTPATH = base+"/src/main/resources/saveFiles/";
+    private final static String FFMPEGPATH = base+"/src/main/resources/ffmpeg.exe  ";
 
 
     /**

@@ -36,8 +36,6 @@ public class MyController {
     @Autowired
     FindFiles findFiles;
 
-    private String INPUTPATH = "E:\\GoogleDownload\\pornhub\\6.mp4";
-
     //上传接口
     @PostMapping("/upload")
     public String upload(MultipartFile file) throws IOException {

@@ -38,7 +38,7 @@ public class FileManagerImpl implements FileManager {
         String originalFilename = file.getOriginalFilename();
         //获取files绝对路径；
         String flag = IdUtil.fastSimpleUUID();//定义唯一标识；
-        String rootFilePath = System.getProperty("user.dir")+"/src/main/resources/files/"+flag+originalFilename;
+        String rootFilePath = System.getProperty("user.dir")+"/src/main/resources/uploadFiles/"+flag+originalFilename;
         System.out.println("文件上传成功，路径为："+rootFilePath);
         //将从前端获取到的对象，写入到指定地址；
         FileUtil.writeBytes(file.getBytes(),rootFilePath);
@@ -51,7 +51,7 @@ public class FileManagerImpl implements FileManager {
     public String downloadFile(String flag, HttpServletResponse response) {
 
         OutputStream os; //新建输出流对象；
-        String basePath = System.getProperty("user.dir")+"/src/main/resources/files/";//定义文件上传的根路径
+        String basePath = System.getProperty("user.dir")+"/src/main/resources/upploadFiles/";//定义文件上传的根路径
 //        获取到所有的文件名称
         List<String> fileNames = FileUtil.listFileNames(basePath);
         String fileName = fileNames.stream().filter(name -> name.contains(flag)).findAny().orElse("");

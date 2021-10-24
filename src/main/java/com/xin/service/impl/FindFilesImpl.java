@@ -18,7 +18,7 @@ public class FindFilesImpl implements FindFiles {
     @Override
     public String getAbsolutePath(String flag) {
 
-        String basePath = System.getProperty("user.dir")+"/src/main/resources/files/";//定义文件上传的根路径
+        String basePath = System.getProperty("user.dir")+"/src/main/resources/uploadFiles/";//定义文件上传的根路径
 //        获取到所有的文件名称
         List<String> fileNames = FileUtil.listFileNames(basePath);
         String fileName = fileNames.stream().filter(name -> name.contains(flag)).findAny().orElse("");
