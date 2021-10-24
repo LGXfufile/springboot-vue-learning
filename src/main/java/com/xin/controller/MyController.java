@@ -60,7 +60,8 @@ public class MyController {
 
         String absolutePath = findFiles.getAbsolutePath(flag);
         if(StrUtil.isNotEmpty(absolutePath)){
-            String musicPath = ffmpegVideoManager.videoToMusic(absolutePath);
+//            String musicPath = ffmpegVideoManager.videoToMusic(absolutePath);
+            String musicPath = ffmpegVideoManager.videoToMp3(absolutePath);
             return "音频已生成，地址："+musicPath;
         }
         System.out.println("absolutePath is null");

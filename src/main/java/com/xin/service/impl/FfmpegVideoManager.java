@@ -33,4 +33,6 @@ public interface FfmpegVideoManager {
      */
     String videoToMusic(String INPUTPATH ) throws IOException;
 
+    String videoToMp3(String INPUTPATH ) throws IOException;
+
 }

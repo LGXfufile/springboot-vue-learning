@@ -72,4 +72,18 @@ public class FfmpegVideoManagerImpl implements FfmpegVideoManager {
         runtime.exec(videoToMusic);
         return musicPath;
     }
+
+    @Override
+    public String videoToMp3(String INPUTPATH) throws IOException {
+
+        UUID uuid = UUID.randomUUID();
+        Runtime runtime = Runtime.getRuntime();
+        String musicPath = OUTPATH + uuid + ".mp3";
+        String videoToMusic = FFMPEGPATH + "-i " + INPUTPATH + "  -f mp3 -vn " + musicPath;
+        System.out.println("音频已生成，地址："+OUTPATH + uuid + ".m4a");
+        System.out.println(videoToMusic);
+        runtime.exec(videoToMusic);
+        return musicPath;
+
+    }
 }
