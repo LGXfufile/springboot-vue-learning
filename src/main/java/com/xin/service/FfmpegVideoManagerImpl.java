@@ -14,8 +14,10 @@ import java.io.IOException;
 @Service
 public class FfmpegVideoManagerImpl implements FfmpegVideoManager {
 //    private final static String INPUTPATH = "E:\\GoogleDownload\\science\\huoyuanjia.mp4";
+
+    private final static String base = System.getProperty("user.dir");
     private final static String OUTPATH = "E:\\GoogleDownload\\ccccc\\science\\";
-    private final static String FFMPEGPATH = "     E:\\Download\\ffmpeg.exe  ";
+    private final static String FFMPEGPATH = base+"/ffmpeg.exe  ";
 
 
     /**
